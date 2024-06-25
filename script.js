@@ -6,6 +6,7 @@ function getComputerChoice(){
     const choices = ["rock", "paper", "scissors"];
     const randomIndex = Math.floor(Math.random()*choices.length);
     return choices[randomIndex];
+
 }
 
 console.log(getComputerChoice());
@@ -55,7 +56,7 @@ function playRound(computerChoice, humanChoice){
     } else if(computerChoice == "paper" && humanChoice == "scissors"){
         console.log("scissors beats paper, human wins");
         humanScore++;
-    } else{
+    } else if(computerChoice == "rock" && humanChoice == "paper"){
         console.log("paper beats rock, human wins"); 
         humanScore++;  
     }
