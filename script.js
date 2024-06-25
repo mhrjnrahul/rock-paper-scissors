@@ -9,8 +9,6 @@ function getComputerChoice(){
 
 }
 
-console.log(getComputerChoice());
-
 function getHumanChoice(){
     const choices = ["rock", "paper", "scissors"];
     let userChoice = null;
@@ -60,9 +58,12 @@ function playRound(computerChoice, humanChoice){
         console.log("paper beats rock, human wins"); 
         humanScore++;  
     }
+    
 }
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+playRound(computerSelection, humanSelection);
+
+console.log(computerSelection);
