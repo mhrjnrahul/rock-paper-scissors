@@ -1,5 +1,6 @@
 let humanScore = 0;
 let computerScore = 0;
+let round = 1;
 
 function getComputerChoice(){
     const choices = ["rock", "paper", "scissors"];
@@ -41,16 +42,22 @@ function playRound(computerChoice, humanChoice){
 
     if(computerChoice == "rock" && humanChoice == "scissors"){
         console.log("rock beats scissors, computer wins");
+        computerScore++;
     } else if(computerChoice == "paper" && humanChoice == "rock"){
         console.log("paper beats rock, computer wins");
+        computerScore++;
     } else if(computerChoice == "scissors" && humanChoice == "paper"){
         console.log("scissors beats paper, computer wins");
+        computerScore++;
     } else if(computerChoice == "scissors" && humanChoice == "rock"){
         console.log("rock beats scissors, human wins");
+        humanScore++;
     } else if(computerChoice == "paper" && humanChoice == "scissors"){
         console.log("scissors beats paper, human wins");
+        humanScore++;
     } else{
-        console.log("paper beats rock, human wins");   
+        console.log("paper beats rock, human wins"); 
+        humanScore++;  
     }
 }
 
